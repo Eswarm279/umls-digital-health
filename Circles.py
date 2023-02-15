@@ -1,11 +1,17 @@
+#Project - 1
+
+#find circles with at least 3 and less than 40 different nodes and get the output with 3 circles
+
 !pip install mysql.connector.python
 import mysql.connector
 import networkx as nw
 
 # By using below the function to check the circles in between CUI1 and CUI2 
 def sol_circles(cui, graph, vis, result):
+    
     result.append(cui)# adding the neighbour node in the result
     vis.add(cui)# Attaching the CUI node to the visited
+    
     #To verifying neighbour node in graph
     for nr in graph[cui]: 
         if nr in result:
